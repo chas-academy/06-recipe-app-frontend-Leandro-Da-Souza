@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from "../api.service";
 
 @Component({
   selector: 'app-recepies',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecepiesComponent implements OnInit {
 
-  constructor() { }
+  recepies = []
+
+  constructor(private api: ApiService) { }
 
   ngOnInit() {
+
+    this.recepies = this.api.getRecepies();
+
   }
+
+  
 
 }
