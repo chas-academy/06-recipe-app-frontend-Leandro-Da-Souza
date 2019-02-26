@@ -3,8 +3,12 @@
     <h1>
         All Recipes
     </h1>
-    <ul *ngFor="let recipe of recepies">
-        <li>{{ recipe.strMeal }}</li>
+    <ul *ngIf="recepies">
+        <li *ngFor="let recipe of recepies">
+            <h3>{{ recipe.strMeal }}</h3>
+            <img [src]="recipe.strMealThumb"/>
+            <p>{{ recipe.strInstructions}}</p>
+        </li>
     </ul>
 
 </div>
