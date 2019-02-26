@@ -1,5 +1,10 @@
-<h1>HELLOOOOOO</h1>
+<div class="container" style="margin-top: 20px;">
 
-<ul *ngFor="let recipe of recepies">
-    <li>{{ recipe }}</li>
-</ul>
+    <h1>
+        All Recipes
+    </h1>
+    <ul *ngFor="let recipe of recepies">
+        <li>{{ recipe.strMeal }}</li>
+    </ul>
+
+</div>
